@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.opmode.auto
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode
 import com.qualcomm.robotcore.hardware.Gamepad
-import org.firstinspires.ftc.teamcode.opmode.subsystems.Drive
+import org.firstinspires.ftc.teamcode.subsystems.Drive
 
 @Autonomous(name = "ExampleAuto")
 class ExampleAuto : LinearOpMode() {

@@ -2,7 +2,7 @@ package org.firstinspires.ftc.teamcode.opmode.teleop
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp
-import org.firstinspires.ftc.teamcode.opmode.subsystems.Drive
+import org.firstinspires.ftc.teamcode.subsystems.Drive
 
 @TeleOp(name = "ExampleTeleOp")
 class ExampleTeleOp : LinearOpMode() {
