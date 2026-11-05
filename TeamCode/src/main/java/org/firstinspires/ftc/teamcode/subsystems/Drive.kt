@@ -6,16 +6,23 @@ import com.qualcomm.robotcore.hardware.Gamepad
 import com.qualcomm.robotcore.hardware.HardwareMap
 
 // This is an example Arcade Drive subsystem, see what changes you can make to make this better.
-class Drive(hardwareMap: HardwareMap, val gamepad: Gamepad) {
+class Drive(
+    hardwareMap: HardwareMap,
+    val gamepad: Gamepad,
+) {
     private val leftDrive = hardwareMap.get(DcMotor::class.java, "leftDrive")
 
     // The right motor needs to be reversed
-    private val rightDrive = hardwareMap.get(DcMotor::class.java, "rightDrive").apply {
-        direction = DcMotorSimple.Direction.REVERSE
-    }
+    private val rightDrive =
+        hardwareMap.get(DcMotor::class.java, "rightDrive").apply {
+            direction = DcMotorSimple.Direction.REVERSE
+        }
 
     // Takes motor powers and tells the motors how fast to go
-    fun setMotorPowers(leftPower: Double, rightPower: Double) {
+    fun setMotorPowers(
+        leftPower: Double,
+        rightPower: Double,
+    ) {
         // What happens if leftPower or rightPower are greater than 1.0?
         // Look up the .coerceIn() method to see how to keep numbers in a range from (-1.0, 1.0)
         leftDrive.power = leftPower
