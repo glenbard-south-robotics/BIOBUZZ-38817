@@ -12,7 +12,7 @@ class ExampleAuto : LinearOpMode() {
 
         waitForStart()
 
-        // Using sleep() works, but if a driver hits the "STOP" button on the driver station
+        // Using sleep() works, but if a driver hits the "STOP" button on the driver station.
         // while the robot is sleeping, the robot might keep driving for the rest of that second!
         // Look up opModeIsActive() to see how to make your robot safely check if it should stop immediately.
 
