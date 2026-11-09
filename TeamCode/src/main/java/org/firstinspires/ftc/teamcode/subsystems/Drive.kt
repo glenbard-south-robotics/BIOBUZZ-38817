@@ -15,7 +15,8 @@ class Drive(
     // The right motor needs to be reversed
     private val rightDrive =
         hardwareMap.get(DcMotor::class.java, "rightDrive").apply {
-            direction = DcMotorSimple.Direction.REVERSE
+            direction = DcMotorSimple.Direction.FORWARD
+            // Was origonaly "REVERSE", should fix it though.
         }
 
     // Takes motor powers and tells the motors how fast to go
