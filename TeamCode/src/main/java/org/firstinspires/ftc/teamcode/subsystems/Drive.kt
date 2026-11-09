@@ -34,11 +34,20 @@ class Drive(
         // Joysticks wear out and might not return 0.0 when released.
         // How can you write a small if statement to ignore tiny joystick movements (like less than 0.05)?
         // This is called a "Deadzone"
-
-        val x = gamepad.left_stick_x.toDouble()
-        val y =
+        var x
+        var y
+        
+        if (gamepad.left_stick_x.toDouble() > 0.05) {
+            val x = gamepad.left_stick_x.toDouble()
+        } else {
+            val x = 0
+        }
+        if (gamepad.left_stick_y.toDouble() > 0.05) {
+            val y =
             -gamepad.left_stick_y.toDouble() // The stick's y values are reversed, so negate (-) it to make it regular.
-
+        } else {
+            val y = 0
+        }
         // Can you create a "Slow Mode" button?
         // Hint: Check if a gamepad button (like gamepad.x) is pressed.
         // If it is, multiply the final powers by a smaller value like 0.5 before sending them to the setMotorPowers() function.
